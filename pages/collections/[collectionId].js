@@ -1,6 +1,5 @@
 import React, { useEffect, useState, useMemo } from 'react';
 import { useRouter } from 'next/router';
-import Link from 'next/link';
 import { useWeb3 } from '@3rdweb/hooks';
 import { client } from '../../lib/sanityClient';
 import { ThirdwebSDK } from '@3rdweb/sdk';
@@ -11,14 +10,14 @@ import { HiDotsVertical } from 'react-icons/hi';
 import NFTCard from '../../components/NFTCard';
 
 const style = {
-  bannerImageContainer: `h-[20vh] w-screen overflow-hidden flex justify-center items-center`,
+  bannerImageContainer: `h-[30vh] w-screen overflow-hidden flex justify-center items-center`,
   bannerImage: `w-full object-cover`,
   infoContainer: `w-screen px-4`,
   midRow: `w-full flex justify-center text-white`,
   endRow: `w-full flex justify-end text-white`,
   profileImg: `w-40 h-40 object-cover rounded-full border-2 border-[#202225] mt-[-4rem]`,
   socialIconsContainer: `flex text-3xl mb-[-2rem]`,
-  socialIconsWrapper: `w-44`,
+  socialIconsWrapper: `w-44 mr-10`,
   socialIconsContent: `flex container justify-between text-[1.4rem] border-2 rounded-lg px-2`,
   socialIcon: `my-2`,
   divider: `border-r-2`,
@@ -47,12 +46,13 @@ const Collection = () => {
 
     const sdk = new ThirdwebSDK(
       provider.getSigner()
+      //  // alchemy key
       // 'https://eth-goerli.g.alchemy.com/v2/x00ivJkXDje1tf5LZptVyyx_krFUAIod'
     );
     return sdk.getNFTModule(collectionId);
   }, [provider]);
 
-  // get all NFTs in the collection
+  // Getting all the NFTs in the collection
   useEffect(() => {
     if (!nftModule) return;
     (async () => {
@@ -61,7 +61,7 @@ const Collection = () => {
       setNfts(nfts);
     })();
   }, [nftModule]);
-
+  // Getting marketplace module
   const marketPlaceModule = useMemo(() => {
     if (!provider) return;
 
@@ -74,7 +74,7 @@ const Collection = () => {
     );
   }, [provider]);
 
-  // get all listings in the collection
+  // Getting all listings inside the collection
   useEffect(() => {
     if (!marketPlaceModule) return;
     (async () => {
@@ -83,6 +83,7 @@ const Collection = () => {
   }, [marketPlaceModule]);
 
   const fetchCollectionData = async (sanityClient = client) => {
+    // query made from vision on localhost:3333
     const query = `*[_type == "marketItems" && contractAddress == "${collectionId}" ] {
       "imageUrl": profileImage.asset->url,
       "bannerImageUrl": bannerImage.asset->url,
@@ -99,7 +100,7 @@ const Collection = () => {
 
     console.log(collectionData, '🔥');
 
-    // the query returns 1 object inside of an array
+    // Query will return 1 object inside and array
     await setCollection(collectionData[0]);
   };
 
@@ -107,8 +108,6 @@ const Collection = () => {
     fetchCollectionData();
   }, [collectionId]);
 
-  console.log(router.query);
-  console.log(router.query.collectionId);
   return (
     <div className='overflow-hidden bg-[#17181A]'>
       <Header />

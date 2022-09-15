@@ -12,7 +12,7 @@ const style = {
   wrapper: `flex flex-col items-center container-lg text-[#e5e8eb]`,
   container: `container p-6`,
   topContent: `flex`,
-  nftImgContainer: `flex-1 mr-4`,
+  nftImgContainer: `flex mr-4` /*flex-1*/,
   detailsContainer: `flex-[2] ml-4`,
 };
 const Nft = () => {
@@ -67,7 +67,7 @@ const Nft = () => {
   }, [marketPlaceModule]);
 
   return (
-    <div className='bg-[#17181A] h-screen'>
+    <div className='bg-[#17181A] h-full min-h-screen overflow-x-hidden'>
       <Header />
       <div className={style.wrapper}>
         <div className={style.container}>

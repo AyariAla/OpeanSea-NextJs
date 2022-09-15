@@ -5,10 +5,10 @@ import { IoIosArrowDroprightCircle } from 'react-icons/io';
 
 // FIXME:  contentwrapp - h - screen
 const style = {
-  wrapper: `relative`,
+  wrapper: `relative `,
   // before rendering children divs process the bg image with low opacity so it doesn't bleed on children divs
   container: `before:content-[''] before:bg-red-500 before:absolute before:top-0 before:left-0 before:right-0 before:bottom-0 before:bg-[url('https://lh3.googleusercontent.com/ujepnqpnL0nDQIHsWxlCXzyw4pf01yjz1Jmb4kAQHumJAPrSEj0-e3ABMZlZ1HEpJoqwOcY_kgnuJGzfXbd2Tijri66GXUtfN2MXQA=s250')] before:bg-cover before:bg-center before:opacity-20 before:blur`,
-  contentWrapper: `flex relative justify-center flex-wrap items-center w-screen h-screen`,
+  contentWrapper: `flex relative justify-center flex-wrap items-center w-screen min-h-screen h-full`,
   //   taking half of the width of the containing div
   copyContainer: `w-1/2 `,
   title: `relative text-white text-[46px] font-bold mr-[10px]`,
@@ -16,7 +16,7 @@ const style = {
   ctaContainer: `flex`,
   accentedButton: ` relative text-lg font-semibold px-12 py-4 bg-[#2181e2] rounded-lg mr-5 text-white hover:bg-[#42a0ff] cursor-pointer`,
   button: ` relative text-lg font-semibold px-12 py-4 bg-[#363840] rounded-lg mr-5 text-[#e4e8ea] hover:bg-[#4c505c] cursor-pointer`,
-  cardContainer: `rounded-[3rem] mt-10`,
+  cardContainer: `rounded-[3rem] mt-7`,
   infoContainer: `h-20 bg-[#313338] p-4 rounded-b-xl flex items-center text-white `,
   author: `flex flex-col justify-center ml-4 text-bold`,
   name: `text-xl font-bold`,
