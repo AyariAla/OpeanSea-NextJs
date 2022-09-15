@@ -9,7 +9,9 @@ Authentication is established with metamask.
 
 
 [![Deploy with Vercel](https://vercel.com/button)](https://nextjs-opensea-ayariala.vercel.app/)
-![image]([https://user-images.githubusercontent.com/46978739/190424143-f799724a-b9cc-47c5-a436-6c4ff12e118d.png](https://drive.google.com/file/d/16IX8uyKcQwFp8Ie_UWNt56a0Qai53vhj/view?usp=sharing))
+
+
+![image]([https://github.com/AyariAla/OpeanSea-NextJs/blob/main/assets/Connect.gif?raw=true])
 ![alt text](https://github.com/AyariAla/OpeanSea-NextJs/blob/main/connect.gif)
 
 ## How to use
