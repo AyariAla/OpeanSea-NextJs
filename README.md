@@ -11,7 +11,7 @@ Authentication is established with metamask.
 
 ![Connect](./READMEimgs/Connect.gif)
 
-![Collection](./READMEimgs/collection1.png)
+![Collection](./READMEimgs/collection1.PNG)
 
 ![Collection](./READMEimgs/buy.png)
 
