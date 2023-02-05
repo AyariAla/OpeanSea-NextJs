@@ -5,12 +5,15 @@ This project was made using #NextJs #Tailwind #ThirwebSDK #SanityIO
 
 It includes a landing page and collection page listed on Georly Test network fetched from ThirdWeb marketplace module and NFT collection module.
 Authentication is established with metamask.
-## Responsive design
+## NFT Listing on Goerli testnet.
 
 > Implementation
 
-![Responsive](./READMEimgs/Connect.gif)
+![Connect](./READMEimgs/Connect.gif)
 
+![Collection](./READMEimgs/collection1.png)
+
+![Collection](./READMEimgs/buy.png)
 
 
 ## Instructions
